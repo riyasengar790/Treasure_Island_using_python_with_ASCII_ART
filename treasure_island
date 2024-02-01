@@ -1,5 +1,5 @@
 import pyfiglet
-# Function to prompt the player and get their choice
+# Function to prompt the player and get their choice.
 def get_choice(prompt):
     while True:
         choice = input(prompt).lower()
