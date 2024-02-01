@@ -1,4 +1,12 @@
 import pyfiglet
+# Function to prompt the player and get their choice
+def get_choice(prompt):
+    while True:
+        choice = input(prompt).lower()
+        if choice == "left" or choice == "right":
+            return choice
+        else:
+            print("Invalid choice. Please enter 'left' or 'right'.")
 s = "welcome to the treasure"
 art = pyfiglet.figlet_format(s,font="digital")
 print(art)
@@ -6,7 +14,7 @@ print(art)
 r = "your mission is to find the treasure"
 art = pyfiglet.figlet_format(r,font='digital')
 print(art)
-choice1 = input("You are at a road . where you want to go .type left or right ").lower()
+choice1 = get_choice("You are at a road . where you want to go .type left or right ").lower()
 art = pyfiglet.figlet_format(choice1)
 print(art)
 if choice1=='left':
